@@ -3,9 +3,14 @@ import React from "react";
 import { enableScreens } from "react-native-screens";
 
 import Routes from "routes/Routes";
+import { ThemeProvider } from "context/ThemeContext";
 
 enableScreens();
 
 export default () => {
-    return <Routes />;
+    return (
+        <ThemeProvider>
+            <Routes />
+        </ThemeProvider>
+    );
 };
